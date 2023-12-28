@@ -4,7 +4,8 @@
 ## Практика студентов Финансового университета
 
 
-> Задания
+### Основные темы
 
-1. [Создать страницу авторизации](https://github.com/VladimirAndropov/wd/blob/main/1.html)
+
+1. [HTML CSS js](https://github.com/VladimirAndropov/wd/blob/main/html/README.md)
 2. sfsdf
