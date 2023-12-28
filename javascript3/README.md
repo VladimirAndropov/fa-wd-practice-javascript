@@ -72,24 +72,30 @@ __________________________________________
 
 ### Контрольные вопросы
 Что произойдет при обращении к функциям getRandomInt и getCard?
+
 ![image4](images/image2.png "image4") 
 
 
 Что возвращают функция getSum?
+
 ![image4](images/image4.png "image4") 
 
 Что хранится в переменных dealer, player, answer?
+
 ![image4](images/image3.png "image4") 
 
 
 Что делает функция getStatus?
+
 ![image4](images/image6.png "image4") 
 
 
 Что делает цикл do?
+
 ![image4](images/image5.png "image4") 
 
 Что выведется на экран?
+
 ![image4](images/image1.png "image4") 
 
 
