@@ -9,7 +9,7 @@ __________________________________________
 
 
 
-# Java Script. Игра Black Jack
+- # Java Script. Игра Black Jack
 
 ### [Методичка](https://docs.google.com/document/d/1IkshSUprLN6kPMoTX4wv8Y_4PSweQluf/edit#)
 
