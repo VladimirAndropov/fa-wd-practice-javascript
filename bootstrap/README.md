@@ -4,7 +4,7 @@
 ## Практика студентов Финансового университета
 
 
-## Bootstrap - Hello World
+# Bootstrap - Hello World
 ____________________
 ## [Примеры](https://github.com/VladimirAndropov/scos-platform/tree/master/lms/static/sass/bootstrap)
 
@@ -15,8 +15,7 @@ ____________________
 
 
 ### Задания для выполнения
-Скачать файл по ссылке: https://drive.google.com/file/d/1JZhw1Ng1N1cUNWR7D-Jpg9y7oqX1_S2f/view?usp=sharing
-и открыть его в Sublime Text.
+Скачать файл  [frame.html](https://github.com/VladimirAndropov/wd/blob/main/bootstrap/frame.html)
 
 Подключить стили.
 
@@ -33,11 +32,13 @@ ____________________
 https://getbootstrap.com/docs/4.5/getting-started/download/
 
 Подключить локальную таблицу стилей можно с помощью:
-\<link rel="stylesheet" href="bootstrap/css/style.js" > 
+
+    <link rel="stylesheet" href="bootstrap/css/style.js" > 
 Предварительно создав папку css с файлом style.js.
 
 Файл main.js для будущих скриптов можно подключить следующим образом:
-\<script src="bootstrap/js/main.js" ></script>
+
+    <script src="bootstrap/js/main.js" ></script>
 
 Подключить используемые шрифты можно с сайта: https://fonts.google.com/
 
@@ -48,12 +49,14 @@ https://getbootstrap.com/docs/4.5/getting-started/download/
 
 ### Контрольные вопросы
 Для чего нужна эта строка: 
-\<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 Можно ли работать с библиотеками локально?
+______
 
 
-## Bootstrap.  Навигация на сайте
+# Bootstrap.  Навигация на сайте
 Цель работы
 
     Получить навыки создания базовых стилей и навигации на сайте.
@@ -102,15 +105,18 @@ https://getbootstrap.com/docs/4.5/getting-started/download/
 
 
 ### Контрольные вопросы
-За что отвечает класс navbar-expand-lg?
+За что отвечает класс 
+
+    navbar-expand-lg?
 
 Как добавлять разделители во вложенное меню?
 
 ### Дополнительные задания
 
 Поменять фон меню на странице.
+_______
 
-## Bootstrap.  Базовые компоненты для сайта
+# Bootstrap.  Базовые компоненты для сайта
 
 Цель работы
 
@@ -129,7 +135,9 @@ https://getbootstrap.com/docs/4.5/getting-started/download/
 Способ обращения к компоненту описан в документации на https://getbootstrap.com перед каждым компонентом.
 
 ### Контрольные вопросы
-Как исправить данную строчку, чтобы выключка текста была влево \<ul class="navbar-nav mr-auto">?
+Как исправить данную строчку, чтобы выключка текста была влево 
+
+    <ul class="navbar-nav mr-auto">?
 
 Что позволяет сделать утилита Spacing?
 
