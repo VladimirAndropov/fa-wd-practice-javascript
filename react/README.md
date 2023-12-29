@@ -178,100 +178,349 @@
 ## Дополнительные задания
 Дополнительно: изменить стиль реакт-компонентов и добавьте новые на html-страницу.
 
-- # Компилятор Babel. Способы описания компонентов
+- # Props, State и события
+
 Цель работы
 
-    Познакомить со способами описания компонент в React, а также с компилятором для них Babel.
+    Познакомить с коллекциями значений, которые ассоциированы с компонентом. Эти значения позволяют создавать динамические компоненты, которые не зависят от жестко закодированных статических данных, а также учитывать состояние определенное внутри компонента и доступно только из компонента.
+
 ## Задания для выполнения
-1. Подключите компилятор Babel  к html-странице. 
-2. Определите один и тот же компонент тремя способами: функционально, используя классы ES6, с помощью стрелочной функции.
-3. Поместите на страницу таймер с помощью компонента React.
-4. Загрузить созданную страницу на GitHub в репозиторий Student, используя формат в названии Фамилия (латинскими буквами)_4.
+1. Выведите свои ФИО, возраст в одной переменной с помощью ``props``.
+2. В конструкторе созданного класса установите объект ``state``. 
+Создайте кнопку, которая будет менять состояние при нажатии с помощью компонента React. 
+При определении конструктора компонента в нем должен вызываться конструктор базового класса, в который передается объект props.
+3. Загрузить созданную страницу на GitHub в репозиторий Student, используя формат в названии Фамилия (латинскими буквами)_6.
+
 ## Методические указания
-1. Чтобы подключить Babel:
-В ``<head>`` укажите 
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+Для использования props можно воспользоваться синтаксисом на выбор:
+*Функциональный подход*
 
-А также элемент *script*, который содержит основной код приложения, должен иметь атрибут type="text/babel":
-
-        <script type="text/babel">
-            ReactDOM.render(
-                <h1>Hello React</h1>,
-                document.getElementById("app")
-            )
-        </script>
-
-
-2. Чтобы задать компонент функционально:
-
-        function Hello() {
-        return <h1>Привет</h1>;
-        }
-
-Чтобы задать компонент с помощью стрелочной функции:
-
-    var Hello =() => {
-        return (<h1>Привет</h1>);
+    function Hello(props) {
+      return <div>
+                <p>Имя: {props.name}</p>
+                <p>Возраст: {props.age}</p>
+        </div>;
     }
-Чтобы задать компонент с помощью классов ES6:
+
+*Использование классов ES6*
 
     class Hello extends React.Component {
-    render() {
-        return <h1>Привет</h1>;
+      render() {
+        return <div>
+                <p>Имя: {this.props.name}</p>
+                <p>Возраст: {this.props.age}</p>
+        </div>;
+      }
     }
+
+*C использованием стрелочной функции:*
+
+    const Hello = (props) => {
+        
+        const {name, age} = props;
+        return(<div>
+                <p>Имя: {name}</p>
+                <p>Возраст: {age}</p>
+              </div>);
     }
-Также нужно задать метод render , который возвращает создаваемый элемент на JSX.
+
+А в конце использовать:
 
     ReactDOM.render(
-                <Hello />,
-                document.getElementById("container")
-            )
-3. Компонент с таймером:
+                  <Hello name="Алевтина" age="33" />,
+                  document.getElementById("app")
+              )
 
-        class Timer extends React.Component {
-        constructor(props) {
-            super(props);
-            this.state = { seconds: 0 };
-        }
+Для обновления состояния вызывается функция
 
-        tick() {
-            this.setState(state => ({
-            seconds: state.seconds + 1
-            }));
-        }
+ ``setState(): this.setState({welcome: "Привет React"}``;
 
-        componentDidMount() {
-            this.interval = setInterval(() => this.tick(), 1000);
-        }
+Вначале необходимо задать стиль для состояний:
 
-        componentWillUnmount() {
-            clearInterval(this.interval);
-        }
+    button{
+                width: 100px;
+                height:30px;
+                border-radius: 4px;
+                margin:50px;
+            }
+            .on{
+                color:#666;
+                background-color: #ccc;
+            }
+            .off{
+                color:#888;
+                background-color: white;
+            }
 
-        render() {
-            return (
-            <div>
-                Seconds: {this.state.seconds}
-            </div>
-            );
-        }
-        }
+А затем создать сам компонент изменяющий состояния:
 
+        class ClickButton extends React.Component {
+             
+           constructor(props) {
+               super(props);
+               this.state = {class: "off", label: "Нажми"};
+                 
+               this.press = this.press.bind(this);
+           }
+           press(){
+               let className = (this.state.class==="off")?"on":"off";
+               this.setState({class: className});
+           }
+           render() {
+               return <button onClick={this.press} className={this.state.class}>{this.state.label}</button>;
+           }
+       }
+         
+       ReactDOM.render(
+           <ClickButton />,
+           document.getElementById("app")
+       )
+
+И вызвать его в html-документе.
+## Контрольные вопросы
+В чем отличие Props от State?
+
+В чем разница между обработкой событий в React и элементов DOM с помощью обычного JavaScript
+
+## Дополнительные задания
+Добавьте другие контролы к кнопке на страницу html.
+
+- # Жизненный цикл, управление ресурсами и составные компоненты
+Цель работы
+
+    Познакомить с этапами жизненного цикла компонента, научить создавать составные компоненты и оптимизировать ресурсы приложения.
+
+## Задания для выполнения
+1. Реализуйте события жизненного цикла
+ ``(constructor(props), componentWillMount(), render()``, а также после рендеринга
+ ``shouldComponentUpdate(nextProps, nextState), componentWillUpdate(nextProps, nextState), render(), componentDidUpdate(prevProps, prevState))``
+ для кнопки с помощью функций в React.
+
+2. Создайте часы, которые выводят текущее время на страницу и для обновления времени используют таймер с помощью функции ``componentDidMount()``.
+ А для освобождения ресурсов применяется функция ``componentWillUnmount()``.
+3. Реализуйте поиск по списку с помощью составного компонента.
+4. Загрузить созданную страницу на GitHub в репозиторий Student, используя формат в названии Фамилия (латинскими буквами)_7.
+
+## Методические указания
+
+1. Создание событий внутри ``class ClickButton`` extends   
+
+
+        React.Component {:
+                  constructor(props) {
+                      super(props);
+                      this.state = {class: "off", label: "Нажми"};
+                        
+                      this.press = this.press.bind(this);
+                        
+                      console.log("constructor");
+                  }
+                  componentWillReceiveProps(nextProps) {
+                      console.log("componentWillReceiveProps()");
+                  }
+
+
+3. Список группы
+
+        const propsValues = {
+            title: "Список группы",
+            items: [
+                "Студент 1", 
+                "Студент 2", 
+                "Студент 3", 
+                "Студент 4", 
+                "Студент 5", 
+                "Студент 6"
+            ]
+        };
+              
+        class Item extends React.Component {
+            render() {
+                return <li>{this.props.name}</li>;
+            }
+        }
+                
+        class SearchPlugin extends React.Component{
+                    
+            constructor(props){
+                super(props);
+                this.onTextChanged = this.onTextChanged.bind(this);
+            }
+                    
+            onTextChanged(e){
+                var text = e.target.value.trim();   // удаляем пробелы
+                this.props.filter(text); // передаем введенный текст в родительский компонент
+            }
+                    
+            render() {
+                return <input placeholder="Поиск" onChange={this.onTextChanged} />;
+            }
+        }
+                          
+        class ItemsList extends React.Component {
+            constructor(props){
+                super(props);
+                this.state = { items: this.props.data.items};
+                                  
+                this.filterList = this.filterList.bind(this);
+            }
+                    
+            filterList(text){
+                var filteredList = this.props.data.items.filter(function(item){
+                    return item.toLowerCase().search(text.toLowerCase())!== -1;
+                }); 
+                this.setState({items: filteredList});
+            }
+                      
+            render() {
+                return(
+                    <div>         
+                        <h2>{this.props.data.title}</h2>
+                        <SearchPlugin filter={this.filterList} />
+                        <ul>
+                            {
+                                this.state.items.map(function(item){
+                                    return <Item key={item} name={item} />
+                                })
+                            }
+                        </ul>
+                    </div>);
+            }
+        }
+                  
         ReactDOM.render(
-        <Timer />,
-        document.getElementById('timer-example')
-        );
-
-Примеры компонент представлены здесь:
-https://reactjs.org/
+            <ItemsList data={propsValues} />,
+            document.getElementById("app")
+        )
 
 ## Контрольные вопросы
-Зачем подключать Babel?
+Что делает функция componentWillUnmount()?
 
-Что плохого в описании компонентов с использованием механизма классов?
+Вызовется ли componentDidUpdate(prevProps, prevState) если shouldComponentUpdate возвращает false?
+
 ## Дополнительные задания
-Дополнительно: изменить стиль реакт-компонентов и добавьте новые на html-страницу.
+Оформить документы с помощью css.
+
+- # Формы
+
+Цель работы
+
+    Познакомить с работой с формами в React.
+## Задания для выполнения
+
+1. В коде, где обновляется значение при вводе с помощью обработчика события change изменить способ получения введенных данных, с использованием атрибута ``ref``.
+
+
+          <!DOCTYPE html>
+          <html>
+          <head>
+              <meta charset="utf-8" />
+              <title>Формы в React</title>
+          </head>
+          <body>
+              <div id="app"></div>
+        
+          <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+          <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+        
+            <script type="text/babel">
+            class UserForm extends React.Component {
+              constructor(props) {
+                super(props);
+                var name = props.name;
+                var nameIsValid = this.validateName(name);
+                var age = props.age;
+                var ageIsValid = this.validateAge(age);
+                this.state = {name: name, age: age, nameValid: nameIsValid, ageValid: ageIsValid};
+          
+                this.onNameChange = this.onNameChange.bind(this);
+                this.onAgeChange = this.onAgeChange.bind(this);
+                this.handleSubmit = this.handleSubmit.bind(this);
+              }
+                validateAge(age){
+                    return age>=0;
+                }
+                validateName(name){
+                    return name.length>2;
+                }
+                onAgeChange(e) {
+                    var val = e.target.value;
+                    var valid = this.validateAge(val);
+                    this.setState({age: val, ageValid: valid});
+                }
+                onNameChange(e) {
+                    var val = e.target.value;
+                    console.log(val);
+                    var valid = this.validateName(val);
+                    this.setState({name: val, nameValid: valid});
+                }
+          
+                handleSubmit(e) {
+                    e.preventDefault();
+                    if(this.state.nameValid ===true && this.state.ageValid===true){
+                        alert("Имя: " + this.state.name + " Возраст: " + this.state.age);
+                    }
+                }
+          
+                render() {
+                    // цвет границы для поля для ввода имени
+                    var nameColor = this.state.nameValid===true?"green":"red";
+                    // цвет границы для поля для ввода возраста
+                    var ageColor = this.state.ageValid===true?"green":"red";
+                    return (
+                        <form onSubmit={this.handleSubmit}>
+                            <p>
+                                <label>Имя:</label><br />
+                                <input type="text" value={this.state.name} 
+                                    onChange={this.onNameChange} style={{borderColor:nameColor}} />
+                            </p>
+                            <p>
+                                <label>Возраст:</label><br />
+                                <input type="number" value={this.state.age} 
+                                    onChange={this.onAgeChange}  style={{borderColor:ageColor}} />
+                            </p>
+                            <input type="submit" value="Отправить" />
+                        </form>
+                    );
+                }
+            }
+            ReactDOM.render(
+                <UserForm name="" age="0" />,
+                document.getElementById("app")
+            )
+            </script>
+        </body>
+        </html>
+
+2. Загрузить созданную страницу на GitHub в репозиторий tera, используя формат в названии Фамилия (латинскими буквами)_8.
+## Методические указания
+
+Для обращения к компонентам у каждого установите атрибут ``ref``:
+
+    <NameField value="" ref="nameField" />
+    <AgeField value="5" ref="ageField" />
+
+И в дальнейшем по значению атрибута мы можем ссылаться на эти компоненты, в том числе получать их состояние:
+
+    handleSubmit(e) {
+        e.preventDefault();
+        var name = this.refs.nameField.state.value;
+        var age = this.refs.ageField.state.value;
+        if(this.refs.nameField.state.valid && this.refs.ageField.state.valid){
+            alert("Имя: " + name + " Возраст: " + age);
+        }
+    }
+
+## Контрольные вопросы
+Атрибут ref может применяться к любому компоненту React?
+
+Для чего служит атрибут defaultValue?
+
+
+## Дополнительные задания
+Добавьте стили на страницу html.
 
 
 # Ссылки:
