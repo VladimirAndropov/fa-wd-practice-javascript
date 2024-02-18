@@ -5,6 +5,17 @@
 
 
 # javaScript
+-  [Переменные, типы данных](#java-script-переменные-типы-данных)
+- [Java Script. Оператор ветвления if, циклы do, while, for](#java-script-оператор-ветвления-if-циклы-do-while-for)
+- [Java Script. Массивы](#java-script-массивы)
+- [Методы объекта, this. Конструкторы, создание объектов через "new"](#методы-объекта-this-конструкторы-создание-объектов-через-"new")
+- [Java Script. Классы и функции](#java-script-классы-и-функции)
+- [Java Script. Стрелочные функции](#java-script-стрелочные-функции)
+- [Java Script. Функции высшего порядка](#java-script-функции-высшего-порядка)
+- [Тип данных Symbol. Конструкция "switch"](#тип-данных-symbol-конструкция-"switch")
+- [Java Script. Работа с формами](#java-script-работа-с-формами)
+- [Ссылки на учебную литературу](#ссылки-на-учебную-литературу)
+
 __________________________________________
 
 
@@ -811,8 +822,7 @@ Cтили можно создать внутри документа:
     textbook: # ссылка на главу из учебника
     test: 
     additional:
-      - title: "JavaScript Crash Course For Beginners"
-        url: https://www.youtube.com/watch?v=hdI2bqOjy3c&list=PLillGF-RfqbbnEGy3ROiLWk7JMCuSyQtX&index=2
+  * ["JavaScript Crash Course For Beginners"](https://www.youtube.com/watch?v=hdI2bqOjy3c)
         
       - title: "JavaScript Основы для Начинающих - Полный Курс за 6 часов [2020]"
         url: https://www.youtube.com/watch?v=Bluxbh9CaQ0
