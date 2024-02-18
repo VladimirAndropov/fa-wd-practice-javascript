@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body onload="on_load()">
+    <div id="div-table">
+        <table border="1" cellspacing="1" cellpadding="5">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+        </table>
+    </div>
+    <div id="div-button">
+        <button id="calculate" onclick="calculate_highlighted()">Вычислить сумму</button>
+        <button id="clear" onclick="clear_highlighting()">Очистить</button>
+    </div>
+    <div id="div-result">
+        Сумма выделенных ячеек - <span id="span-result">
+        </span>
+    </div>
+</body>
+
+</html>
