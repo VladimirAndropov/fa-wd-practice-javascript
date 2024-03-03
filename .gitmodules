@@ -1,0 +1,9 @@
+[submodule "ЗБ-ПИ21-2/Avseitseva-fa-wd-practice-javascript"]
+	path = ЗБ-ПИ21-2/Avseitseva-fa-wd-practice-javascript
+	url = https://github.com/avseitsevad/Avseitseva-fa-wd-practice-javascript
+[submodule "ЗБ-ПИ21-2/miroshnikov-fa-wd-practice-javascript"]
+	path = ЗБ-ПИ21-2/miroshnikov-fa-wd-practice-javascript
+	url = https://github.com/mirrosha26/miroshnikov-fa-wd-practice-javascript
+[submodule "ЗБ-ПИ21-2/Yakushchev-fa-wd-practice-javascript"]
+	path = ЗБ-ПИ21-2/Yakushchev-fa-wd-practice-javascript
+	url = https://github.com/GeoYak/Yakushchev-fa-wd-practice-javascript
