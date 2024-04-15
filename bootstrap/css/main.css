@@ -1,0 +1,28 @@
+body {
+  font-family: sans-serif;
+  color: #F0F0F0;
+  background: linear-gradient(to bottom right, black, hsl(270, 40%, 35%));
+}
+
+.center-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b4ad9e;
+}
+
+a:hover {
+  color: #898377;
+}
