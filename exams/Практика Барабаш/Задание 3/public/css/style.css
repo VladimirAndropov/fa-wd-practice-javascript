@@ -1,0 +1,37 @@
+.title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+table {
+    font-family: sans-serif;
+    text-align: left;
+    border-collapse: separate;
+    border-spacing: 2px;
+    background: #ece9e0;
+    color: #656665;
+    border: 2px solid #656665;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 50px;
+}
+
+th {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+}
+
+td {
+    padding: 10px;
+    font-size: 18px;
+}
+
+tr.one {
+    background: #e8cc78;
+}
+
+tr.two {
+    background: #e2d3a3;
+}

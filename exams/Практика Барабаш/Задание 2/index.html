@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Currency</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+    <div class="title"> Сервис для мониторинга курса валют</div>
+    <div id='block'>
+        <div id="div-selection" class="selection">
+            <label for="select">Выберите марку нефти</label>
+            <select id="mark-select" onchange="getRate()">
+                <option value="" disabled selected hidden>Выберите</option>
+                <option value="BRENT">Brent</option>
+                <option value="WTI">WTI</option>
+                <option value="URALS">Urals</option>
+            </select>
+        </div>
+        <div id='div-output' class="outputs">
+            <div id="div-price">
+                <label for="price">Курс на сегодня: </label>
+                <span id="price">0</span>
+            </div>
+            <div id="div-change">
+                <label for="change">Изменение в цене: </label>
+                <span id="change">0</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
