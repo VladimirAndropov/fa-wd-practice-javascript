@@ -1,0 +1,21 @@
+.title {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+select {
+    padding: 5px 35px 5px 5px;
+    font-size: 24px;
+    border: 2px solid #ccc;
+}
+
+.selection { 
+    font-size: 24px;
+    padding: 100px 5px 50px 5px;
+}
+
+.outputs {
+    font-size: 24px;
+    
+}
