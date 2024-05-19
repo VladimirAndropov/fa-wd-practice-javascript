@@ -43,3 +43,18 @@
 [submodule "ЗБ-ПИ21-2/Makeeva"]
 	path = ЗБ-ПИ21-2/Makeeva
 	url = https://github.com/Margarita215729/Makeeva
+[submodule "ЗБ-ПИ21-2/Cherkasova-fa-wd-practice-javascript"]
+	path = ЗБ-ПИ21-2/Cherkasova-fa-wd-practice-javascript
+	url = https://github.com/DariaCherkasova/Cherkasova-fa-wd-practice-javascript
+[submodule "ЗБ-ПИ21-1/guseva-fa-wd-practice-javascript"]
+	path = ЗБ-ПИ21-1/guseva-fa-wd-practice-javascript
+	url = https://github.com/premashed/guseva-fa-wd-practice-javascript
+[submodule "ЗБ-ПИ21-2/oshroev-fa-wd-practice-javascript"]
+	path = ЗБ-ПИ21-2/oshroev-fa-wd-practice-javascript
+	url = https://github.com/Startaper/oshroev-fa-wd-practice-javascript
+[submodule "ЗБ-ПИ21-1/fa-wd-practice-javascript"]
+	path = ЗБ-ПИ21-1/fa-wd-practice-javascript
+	url = https://github.com/SvetaLana2307/fa-wd-practice-javascript
+[submodule "ЗБ-ПИ21-2/myasnikov-web-development"]
+	path = ЗБ-ПИ21-2/myasnikov-web-development
+	url = https://github.com/aleksandrm7/myasnikov-web-development
