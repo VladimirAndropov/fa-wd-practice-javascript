@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Вычисление возраста</title>
+  </head>
+  <body>
+    <script>
+      var name = prompt("Введите ваше имя:");
+      var birthYear = parseInt(prompt("Введите ваш год рождения:"));
+      var currentYear = new Date().getFullYear();
+      var age = currentYear - birthYear;
+      document.write(name + ": " + age);
+    </script>
+  </body>
+</html>
