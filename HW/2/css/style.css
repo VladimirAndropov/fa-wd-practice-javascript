@@ -1,0 +1,13 @@
+/* Файл: css/style.css */
+body {
+    background-color: #ffe1e6; /* Светло-розовый цвет фона */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    text-align: center; /* Выравнивание текста по центру */
+}
