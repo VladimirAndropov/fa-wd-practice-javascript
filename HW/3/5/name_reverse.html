@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Переворачиватель имени</title>
+</head>
+
+<body>
+    <script>
+        class NameReverser {
+            constructor(name) {
+                this.name = name;
+            }
+
+            reverseName() {
+                return this.name.split('').reverse().join('');
+            }
+        }
+
+        let nameToReverse = prompt("Введите ваше имя:");
+        let reverser = new NameReverser(nameToReverse);
+        alert("Перевернутое имя: " + reverser.reverseName());
+    </script>
+</body>
+
+</html>

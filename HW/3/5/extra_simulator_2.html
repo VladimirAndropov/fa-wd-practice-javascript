@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Симулятор</title>
+</head>
+<body>
+  <script>
+    // Класс симулятора цветов
+    class ColorSimulator {
+      constructor() {
+        // 0 - красный, 1 - черный, 2 - белый
+        this.colors = [0, 1, 2];
+      }
+
+      // Метод для получения случайного цвета
+      getRandomColor() {
+        // Возвращает случайное значение из массива colors
+        return this.colors[Math.floor(Math.random() * this.colors.length)];
+      }
+
+      // Метод для запуска симуляции
+      runSimulation(times) {
+        // Объект для хранения информации о самой длинной последовательности
+        let maxLength = {
+          color: null,
+          length: 0
+        };
+        let currentColor = null;
+        let currentLength = 0;
+
+        for (let i = 0; i < times; i++) {
+          let color = this.getRandomColor(); // Получаем случайный цвет
+          if (color === currentColor) {
+            currentLength++;
+          } else {
+            if (currentLength > maxLength.length) {
+              maxLength.color = currentColor;
+              maxLength.length = currentLength;
+            }
+            // Обновляем текущий цвет и длину последовательности
+            currentColor = color;
+            currentLength = 1;
+          }
+        }
+
+        // Проверяем последнюю последовательность
+        if (currentLength > maxLength.length) {
+          maxLength.color = currentColor;
+          maxLength.length = currentLength;
+        }
+
+        // Возвращаем информацию о самой длинной последовательности
+        return maxLength;
+      }
+    }
+
+    // Функция для запуска симуляции и отображения результата
+    function simulateAndShowResult() {
+      const simulator = new ColorSimulator(); // Создаем экземпляр симулятора
+      const result = simulator.runSimulation(1000000); // Запускаем симуляцию 1 000 000 раз
+      let colorName;
+
+      // Определяем название цвета по его числовому значению
+      switch (result.color) {
+        case 0:
+          colorName = "красный";
+          break;
+        case 1:
+          colorName = "черный";
+          break;
+        case 2:
+          colorName = "белый";
+          break;
+      }
+
+      alert(`Самая длинная последовательность: ${colorName}, длина: ${result.length}`);
+    }
+
+    simulateAndShowResult();
+  </script>
+</body>
+</html>
+

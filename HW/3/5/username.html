@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Класс для имени</title>
+</head>
+
+<body>
+    <script>
+        class User {
+            constructor(name) {
+                this.name = name;
+            }
+
+            sayHi() {
+                alert("Привет, " + this.name);
+            }
+        }
+
+        let userName = prompt("Введите ваше имя:");
+        let user = new User(userName);
+        user.sayHi(); // Привет, {имя}
+    </script>
+</body>
+
+</html>
