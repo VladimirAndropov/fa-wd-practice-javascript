@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Объекты и конструкторы</title>
+  </head>
+  <body>
+    <script>
+      // 1. Код объекта из методички
+      let user = {
+        name: "Джон",
+        age: 30
+      };
+
+      // Добавление метода к объекту
+      user.sayHi = function() {
+        alert("Привет!");
+      };
+
+      user.sayHi(); // Привет!
+
+      // 2. Создание объекта "покупатель" и вывод трех свойств
+      let customer = {
+        name: "Иван",
+        age: 22,
+        email: "ivan@example.com",
+        address: "Москва, ул. Пушкина, д.1",
+        phone: "+7 (123) 456-78-90"
+      };
+
+      alert("Имя покупателя: " + customer.name);
+      alert("E-mail покупателя: " + customer.email);
+      alert("Адрес покупателя: " + customer.address);
+
+      // 3. Создание объектов: пользователи, заказы и рестораны
+      let users = [
+        { name: "Дмитрий", age: 32 },
+        { name: "Мария", age: 34 },
+        { name: "Олег", age: 19 }
+      ];
+
+      let orders = [
+        { id: 1, product: "Стол", quantity: 1 },
+        { id: 2, product: "Мышь", quantity: 2 },
+        { id: 3, product: "Мяч", quantity: 1 }
+      ];
+
+      let restaurants = [
+        { name: "Итальянская кухня", location: "Север" },
+        { name: "Японская кухня", location: "Восток" },
+        { name: "Русская кухня", location: "Центр" }
+      ];
+
+      // 4. Вывод информации из объектов по условию
+      users.forEach(user => {
+        if (user.age > 30) {
+          alert("Пользователь старше 30 лет: " + user.name);
+        }
+      });
+
+      orders.forEach(order => {
+        if (order.quantity > 1) {
+          alert("Заказ с количеством более 1: " + order.product);
+        }
+      });
+
+      restaurants.forEach(restaurant => {
+        if (restaurant.location === "Центр") {
+          alert("Ресторан в центре: " + restaurant.name);
+        }
+      });
+
+      // 5. Функция-конструктор и создание объектов
+      function User(name) {
+        this.name = name;
+        this.isAdmin = false;
+      }
+
+      let user1 = new User("Вася");
+
+      alert(user1.name); // Вася
+      alert(user1.isAdmin); // false
+
+      // Создание объекта студент
+      function Student(name, age, group) {
+        this.name = name;
+        this.age = age;
+        this.group = group;
+        this.sayHi = function() {
+          alert("Меня зовут: " + this.name);
+        };
+      }
+
+      let student1 = new Student("Иван", 20, "Группа 1");
+      student1.sayHi(); // Меня зовут: Иван
+
+      // Создание нескольких объектов студентов
+      let students = [
+        new Student("Николай", 23, "Группа 1"),
+        new Student("Юлия", 20, "Группа 2"),
+        new Student("Юрий", 19, "Группа 3")
+      ];
+
+      students.forEach(student => {
+        student.sayHi(); // Вывод имени каждого студента
+      });
+    </script>
+  </body>
+</html>

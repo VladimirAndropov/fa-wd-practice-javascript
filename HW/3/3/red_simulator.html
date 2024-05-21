@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Симулятор</title>
+  </head>
+  <body>
+    <script>
+      var countRed = 0;
+      var maxRed = 0;
+      for (var i = 0; i < 1000000; i++) {
+        var randomValue = Math.floor(Math.random() * 3);
+        if (randomValue === 0) {
+          countRed++;
+        } else {
+          if (countRed > maxRed) {
+            maxRed = countRed;
+          }
+          countRed = 0;
+        }
+      }
+
+      alert("Максимальное число раз, когда выпадало красное значение: " + maxRed);
+    </script>
+  </body>
+</html>

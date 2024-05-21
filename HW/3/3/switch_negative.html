@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Замена отрицательных элементов</title>
+  </head>
+  <body>
+    <script>
+      var n = 27; 
+      var arr = [];
+      for (var i = 0; i < n; i++) {
+        arr.push(Math.floor(Math.random() * 41) - 20);
+      }
+      console.log("Исходный массив:", arr);
+
+      for (var i = 0; i < arr.length; i++) {
+        if (arr[i] < 0) {
+          arr[i] = arr[i] * arr[i];
+        }
+      }
+
+      alert("Итоговый массив: " + arr);
+    </script>
+  </body>
+</html>

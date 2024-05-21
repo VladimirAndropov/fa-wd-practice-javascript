@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Средние арифметические и число нулей</title>
+  </head>
+  <body>
+    <script>
+      var arr = [];
+      for (var i = 0; i < 15; i++) {
+        arr.push(Math.floor(Math.random() * 41) - 20);
+      }
+      console.log("Массив:", arr);
+
+      var positiveSum = 0, positiveCount = 0;
+      var negativeSum = 0, negativeCount = 0;
+      var zeroCount = 0;
+
+      for (var i = 0; i < arr.length; i++) {
+        if (arr[i] > 0) {
+          positiveSum += arr[i];
+          positiveCount++;
+        } else if (arr[i] < 0) {
+          negativeSum += arr[i];
+          negativeCount++;
+        } else {
+          zeroCount++;
+        }
+      }
+
+      var positiveMean = positiveCount > 0 ? (positiveSum / positiveCount) : 0;
+      var negativeMean = negativeCount > 0 ? (negativeSum / negativeCount) : 0;
+
+      alert("Массив: " + arr.join(", ") + "\nСреднее арифметическое положительных чисел: " + positiveMean + "\nСреднее арифметическое отрицательных чисел: " + negativeMean + "\nЧисло нулей: " + zeroCount);
+    </script>
+  </body>
+</html>

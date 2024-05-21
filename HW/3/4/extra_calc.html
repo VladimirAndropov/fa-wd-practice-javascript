@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Калькулятор</title>
+  </head>
+  <body>
+    <script>
+      // Объект калькулятор
+      let calculator = {
+        // Сложение
+        add: function(a, b) {
+          return a + b;
+        },
+        // Вычитание
+        subtract: function(a, b) {
+          return a - b;
+        },
+        // Умножение
+        multiply: function(a, b) {
+          return a * b;
+        },
+        // Деление
+        divide: function(a, b) {
+          if (b !== 0) {
+            return a / b;
+          } else {
+            return "Деление на ноль невозможно";
+          }
+        }
+      };
+
+      let num1 = parseFloat(prompt("Введите первое число:"));
+      let num2 = parseFloat(prompt("Введите второе число:"));
+
+      alert("Результаты операций:\n" +
+            "Сложение: " + calculator.add(num1, num2) + "\n" +
+            "Вычитание: " + calculator.subtract(num1, num2) + "\n" +
+            "Умножение: " + calculator.multiply(num1, num2) + "\n" +
+            "Деление: " + calculator.divide(num1, num2));
+    </script>
+  </body>
+</html>

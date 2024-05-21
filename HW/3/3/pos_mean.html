@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Среднее арифметическое положительных элементов</title>
+  </head>
+  <body>
+    <script>
+      var arr = [];
+      for (var i = 0; i < 15; i++) {
+        arr.push(Math.floor(Math.random() * 41) - 10);
+      }
+      console.log("Массив:", arr);
+
+      var positiveSum = 0;
+      var positiveCount = 0;
+      for (var i = 0; i < arr.length; i++) {
+        if (arr[i] > 0) {
+          positiveSum += arr[i];
+          positiveCount++;
+        }
+      }
+
+      var positiveMean = positiveCount > 0 ? (positiveSum / positiveCount) : 0;
+      alert("Среднее арифметическое положительных элементов: " + positiveMean);
+    </script>
+  </body>
+</html>
