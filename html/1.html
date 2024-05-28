@@ -1,184 +1,56 @@
-<!--
-Campus IL - EdX platform and ecommerce themes
-Copyright (C) 2021 Campus IL
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Кулинарные предпочтения Еремеев В. А.</title>
+<link rel="stylesheet" href="1.css">
+</head>
+<body>
+<form id="survey-form">
+    <header>
+        <h1>Анкета кулинарных предпочтений</h1>
+        <p>Пожалуйста, заполните анкету, чтобы помочь нам узнать больше о ваших кулинарных предпочтениях.</p>
+    </header>
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+    <label for="name">Ваше имя:</label>
+    <input type="text" id="name" name="name" required>
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
+    <label for="phone">Номер телефона:</label>
+    <input type="tel" id="phone" name="phone" placeholder="+7 XXX XXX-XX-XX" required>
 
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
--->
+    <label for="email">Электронная почта:</label>
+    <input type="email" id="email" name="email" required>
 
-<!-- ## mako
-<%page expression_filter="h"/>
-<%!
-from django.utils.translation import ugettext as _
-from openedx.core.djangolib.markup import Text, HTML
-from datetime import datetime
-import pytz
-from django.conf import settings
-%>
-<%inherit file="../main.html" />
-<%block name="pagetitle">${_("Contact Us")}</%block> -->
+    <label for="favorite-cuisine">Любимая кухня:</label>
+    <select id="favorite-cuisine" name="favorite-cuisine">
+        <option value="italian">Итальянская</option>
+        <option value="french">Французская</option>
+        <option value="japanese">Японская</option>
+        <option value="russian">Русская</option>
+        <option value="mexican">Мексиканская</option>
+    </select>
 
-<div class="page-heading">
-  <h1>${_("Contact Us")}</h1>
-</div>
+    <fieldset>
+        <legend>Предпочитаемый тип блюда</legend>
+        <label>
+            <input type="radio" name="dish-type" value="starter" required> Закуски
+        </label>
+        <label>
+            <input type="radio" name="dish-type" value="main"> Основные блюда
+        </label>
+        <label>
+            <input type="radio" name="dish-type" value="dessert"> Десерты
+        </label>
+    </fieldset>
 
-<section class="static-content">
-  <div class="grid-manual grid-container">
-    <div class="inner-container">
-      <div class="row">
-        <div class="col col-12 sm-col-10 md-col-8 lg-col-6 xl-col-6 col-centered">
-          <form id="contact_form" class="form-block">
-            % if not user.is_authenticated():
-            <div class="input-group">
-              <label for="">${_("Email")}*</label>
-              <input type="text" class="input-lg" id="email">
-            </div>
-            <div class="input-group">
-              <label for="">${_("Full Name")}*</label>
-              <input type="text" class="input-lg" id="name">
-            </div>
-            % endif
-            <div class="input-group">
-              <label for="">${_("Inquiry Type")}*</label>
-              <div class="custom-select">
-                <select id="subject" class="input-lg">
-                  <option value="">
-                      ## Translators: It is texts for inquiry type selection
-                      ${_("Select")}
-                  </option>
-                  <option value="payments">${_("Payments")}</option>
-                  <option value="certificates">${_("Certificates")}</option>
-                  <option value="assessments">${_("Assessments")}</option>
-                  <option value="videos">${_("Videos")}</option>
-                  <option value="discussion-forums">${_("Discussion Forums")}</option>
-                  <option value="mobile-application">${_("Mobile Application")}</option>
-                  <option value="other">${_("Other")}</option>
-                </select>
-              </div>
-            </div>
-            <div class="input-group">
-              ## Translators: text is used here as a label for message
-              <label for="">${_("Message")}*</label>
-              <textarea id="details" rows="10"></textarea>
-            </div>
-            <input type="text" name="issue_type" id="issue_type" value="contact" class="hidden">
-            <button class="btn-brand btn-client btn-lg" id="submit_btn">${_("Submit")}</button>
-            <div class="input-group">
-              <label for="" class="text-light">* ${_("Required Fields")}</label>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    <label>
+        <input type="checkbox" name="vegetarian"> Я предпочитаю вегетарианскую еду
+    </label>
 
-<a href="#success-message" class="media hidden" id="success-message-btn" rel="leanModal">
-</a>
-<div id="success-message" class="modal">
+    <label for="comments">Комментарии или пожелания:</label>
+    <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
 
-    <div class="alert alert-success" role="alert" aria-labelledby="alert-title-success" tabindex="-1">
-        <span class="icon alert-icon icon-check" aria-hidden="true">
-          <i class="fa fa-check" aria-hidden="true"></i>
-        </span>
-
-        <div class="alert-message">
-          <h3 class="alert-title" id="alert-title-success">
-              ${_("Thank you for your inquiry")}
-          </h3>
-          <p class="alert-copy-with-title">
-              We'll get back to you within 24 hours.
-          </p>
-        </div>
-    </div>
-</div>
-
-
-<!-- <%block name="js_extra"> -->
-<script type="text/javascript">
-
-  var errorMessages = {
-    "name": "Please provide your name.",
-    "email": "Please provide a valid e-mail.",
-    "details": "Please provide message.",
-    "subject": "Please provide an inquiry type."
-  }
-
-  function submitForm(data) {
-    toggleDisableSubmitButton(true);
-    $.post("/submit_feedback", data, function (data, status) {
-      $("#success-message-btn").click();
-      setTimeout( function(){
-        $("#lean_overlay").trigger("click");
-        $('#contact_form').trigger("reset");
-        toggleDisableSubmitButton(false);
-      }  , 2000 );
-    }).fail(function (xhr, status, error) {
-      toggleDisableSubmitButton(false);
-      responseData = jQuery.parseJSON(xhr.responseText);
-      addErrorDiv(responseData.field);
-    });
-  }
-
-  function addErrorDiv(id) {
-    var error_div = "<div class='has-error field-message'><span class='field-message-content'>" + errorMessages[id] + "</span></div>";
-    $("#" + id).addClass("has-error");
-    $("#" + id).parent().append(error_div);
-  }
-
-  function removeErrorDiv(id) {
-    $("#" + id).removeClass("has-error");
-    $($("#" + id).next()).remove();
-  }
-
-  function validateForm() {
-    var optional_fields = ["user_type"];      //Optional fields array
-
-    var form_values = $("#contact_form").find(":input"), i = 0, data = new Object(),
-      response = {"is_form_validate": true, data: ""};
-
-    for (i = 0; i < form_values.length - 2; i++) {
-      var value = $(form_values[i]).val(), id = $(form_values[i]).attr("id");
-      removeErrorDiv(id);
-
-      if (value && value !== "") {
-        data[id] = value;
-      } else {
-        if ($.inArray(id, optional_fields) == -1) {
-          response.is_form_validate = false;
-          addErrorDiv(id);
-        }
-      }
-
-    }
-    response.data = data;
-    return response;
-  }
-
-  function toggleDisableSubmitButton(disabled) {
-    $("#submit_btn").prop("disabled", disabled);
-  }
-
-  $(function () {
-    $("#submit_btn").click(function (e) {
-      e.preventDefault();
-      var validate_form = validateForm();
-      if (validate_form.is_form_validate) {
-        submitForm(validate_form.data);
-      }
-    });
-
-  });
-</script>
-
-<!-- </%block> -->
+    <button type="submit">Отправить</button>
+</form>
+</body>
+</html>
