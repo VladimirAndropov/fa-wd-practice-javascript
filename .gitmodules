@@ -58,3 +58,6 @@
 [submodule "ЗБ-ПИ21-2/myasnikov-web-development"]
 	path = ЗБ-ПИ21-2/myasnikov-web-development
 	url = https://github.com/aleksandrm7/myasnikov-web-development
+[submodule "fa-portfolio"]
+	path = fa-portfolio
+	url = https://github.com/lincot/fa-portfolio
