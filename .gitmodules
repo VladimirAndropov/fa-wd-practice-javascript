@@ -58,3 +58,6 @@
 [submodule "ЗБ-ПИ21-2/myasnikov-web-development"]
 	path = ЗБ-ПИ21-2/myasnikov-web-development
 	url = https://github.com/aleksandrm7/myasnikov-web-development
+[submodule "ZB-PI21-2-SITE-KULAKOV"]
+	path = ZB-PI21-2-SITE-KULAKOV
+	url = https://github.com/kulakovsa215705/ZB-PI21-2-SITE-KULAKOV
