@@ -19,3 +19,42 @@
 [submodule "ЗБ-ПИ21-2/Koraeva-fa-wd-practice-javascript"]
 	path = ЗБ-ПИ21-2/Koraeva-fa-wd-practice-javascript
 	url = https://github.com/okoraeva/Koraeva-fa-wd-practice-javascript
+[submodule "ЗБ-ПИ21-1/Mikheeva-fa-wd-practice-javascript"]
+	path = ЗБ-ПИ21-1/Mikheeva-fa-wd-practice-javascript
+	url = https://github.com/Arishkanyam/Mikheeva-fa-wd-practice-javascript
+[submodule "ЗБ-ПИ21-2/IskandarAbdusalimzoda-wd-practice-javascript"]
+	path = ЗБ-ПИ21-2/IskandarAbdusalimzoda-wd-practice-javascript
+	url = https://github.com/aryanshoh/IskandarAbdusalimzoda-wd-practice-javascript
+[submodule "ЗБ-ПИ21-2/Dzhilavyan"]
+	path = ЗБ-ПИ21-2/Dzhilavyan
+	url = https://github.com/Arman06/Dzhilavyan
+[submodule "ЗБ-ПИ21-1/sadovskaia-web-development"]
+	path = ЗБ-ПИ21-1/sadovskaia-web-development
+	url = https://github.com/sadrium/sadovskaia-web-development/
+[submodule "ЗБ-ПИ21-1/Grebnewa"]
+	path = ЗБ-ПИ21-1/Grebnewa
+	url = https://github.com/Anastas20/Grebnewa
+[submodule "ЗБ-ПИ21-2/ZB-PI21-2-Kulakov-Web"]
+	path = ЗБ-ПИ21-2/ZB-PI21-2-Kulakov-Web
+	url = https://github.com/kulakovsa215705/ZB-PI21-2-Kulakov-Web
+[submodule "ЗБ-ПИ21-1/vassilyev-fa-wd"]
+	path = ЗБ-ПИ21-1/vassilyev-fa-wd
+	url = https://github.com/tarapiygin/vassilyev-fa-wd
+[submodule "ЗБ-ПИ21-2/Makeeva"]
+	path = ЗБ-ПИ21-2/Makeeva
+	url = https://github.com/Margarita215729/Makeeva
+[submodule "ЗБ-ПИ21-2/Cherkasova-fa-wd-practice-javascript"]
+	path = ЗБ-ПИ21-2/Cherkasova-fa-wd-practice-javascript
+	url = https://github.com/DariaCherkasova/Cherkasova-fa-wd-practice-javascript
+[submodule "ЗБ-ПИ21-1/guseva-fa-wd-practice-javascript"]
+	path = ЗБ-ПИ21-1/guseva-fa-wd-practice-javascript
+	url = https://github.com/premashed/guseva-fa-wd-practice-javascript
+[submodule "ЗБ-ПИ21-2/oshroev-fa-wd-practice-javascript"]
+	path = ЗБ-ПИ21-2/oshroev-fa-wd-practice-javascript
+	url = https://github.com/Startaper/oshroev-fa-wd-practice-javascript
+[submodule "ЗБ-ПИ21-1/fa-wd-practice-javascript"]
+	path = ЗБ-ПИ21-1/fa-wd-practice-javascript
+	url = https://github.com/SvetaLana2307/fa-wd-practice-javascript
+[submodule "ЗБ-ПИ21-2/myasnikov-web-development"]
+	path = ЗБ-ПИ21-2/myasnikov-web-development
+	url = https://github.com/aleksandrm7/myasnikov-web-development
