@@ -1,5 +1,7 @@
 [ссылка на портфолио](https://lincot.github.io/fa-portfolio/)
 
+[ссылка на React](https://lincot.github.io/smirnov-fa-wd-practice-javascript/)
+
 # WEB-development
 
 
