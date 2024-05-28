@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Дней до НГ</title>
+</head>
+
+<body>
+    <script>
+        const daysUntilNewYear = () => {
+            let today = new Date();
+            let nextYear = today.getFullYear() + 1;
+            let newYear = new Date(`January 1, ${nextYear} 00:00:00`);
+            let diff = newYear - today;
+            return Math.ceil(diff / (1000 * 60 * 60 * 24));
+        };
+
+        alert(`До Нового Года осталось ${daysUntilNewYear()} дней`);
+    </script>
+</body>
+
+</html>

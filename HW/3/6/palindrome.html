@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Проверка фамилии на палиндром</title>
+</head>
+
+<body>
+    <script>
+        const isPalindrome = (str) => {
+            str = str.toLowerCase().replace(/[^a-zа-я]/g, '');
+            return str === str.split('').reverse().join('');
+        };
+
+        let lastName = prompt("Введите вашу фамилию:");
+        alert(isPalindrome(lastName) ? "Ваша фамилия является палиндромом" : "Ваша фамилия не является палиндромом");
+    </script>
+</body>
+
+</html>

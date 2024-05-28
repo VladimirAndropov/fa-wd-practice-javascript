@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Проверка условий</title>
+</head>
+<body>
+  <script>
+    let age = parseInt(prompt("Сколько Вам лет?", 18));
+
+    let welcome = (age < 18) ?
+      function() { alert('Привет'); } :
+      function() { alert("Здравствуйте!"); };
+
+    welcome(); // теперь всё в порядке
+  </script>
+</body>
+</html>

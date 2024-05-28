@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Калькулятор</title>
+</head>
+
+<body>
+    <script>
+        const add = (a, b) => a + b;
+        const subtract = (a, b) => a - b;
+        const multiply = (a, b) => a * b;
+        const divide = (a, b) => b !== 0 ? a / b : "Деление на ноль невозможно";
+
+        let num1 = parseFloat(prompt("Введите первое число:"));
+        let num2 = parseFloat(prompt("Введите второе число:"));
+
+        alert(`Результаты операций:
+    Сложение: ${add(num1, num2)}
+    Вычитание: ${subtract(num1, num2)}
+    Умножение: ${multiply(num1, num2)}
+    Деление: ${divide(num1, num2)}`);
+    </script>
+</body>
+
+</html>

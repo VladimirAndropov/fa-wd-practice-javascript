@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Операции над элементами массива</title>
+</head>
+<body>
+  <script>
+    let arr = [5, 6, 13, 0, 1, 18, 23];
+
+    const sum = arr => arr.reduce((a, b) => a + b, 0);
+    const even = arr => arr.filter(v => v % 2 === 0);
+    const double = arr => arr.map(v => v * 2);
+
+    alert(`Сумма всех элементов: ${sum(arr)}`);
+    alert(`Четные элементы: ${even(arr)}`);
+    alert(`Удвоенные элементы: ${double(arr)}`);
+  </script>
+</body>
+</html>

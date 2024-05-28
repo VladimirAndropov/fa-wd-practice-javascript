@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Фильтр по п/а</title>
+</head>
+<body>
+  <script>
+    const emails = [
+      "user1@gmail.com",
+      "user2@yandex.ru",
+      "user3@mail.ru",
+      "user4@outlook.com",
+      "user5@yahoo.com"
+    ];
+
+    const filterEmails = (emails, domain) => emails.filter(email => email.includes(domain));
+
+    let domain = prompt("Введите домен для фильтрации (например, 'gmail'):");
+    let filteredEmails = filterEmails(emails, domain);
+
+    alert(`Отфильтрованные e-mail: ${filteredEmails.join(", ")}`);
+  </script>
+</body>
+</html>
