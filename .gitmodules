@@ -58,3 +58,6 @@
 [submodule "ЗБ-ПИ21-2/myasnikov-web-development"]
 	path = ЗБ-ПИ21-2/myasnikov-web-development
 	url = https://github.com/aleksandrm7/myasnikov-web-development
+[submodule "Avseitseva-wd-portfolio"]
+	path = Avseitseva-wd-portfolio
+	url = https://github.com/avseitsevad/Avseitseva-wd-portfolio
