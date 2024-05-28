@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <title>вакансия</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <main>
+    <form>
+      <h1>оставить заявку</h1>
+      <ul>
+        <li><label for="name">ФИО</label><input type="text" id="name" placeholder="Иванов Иван Иванович" /></li>
+        <li>
+          <label for="age">возраст</label><input type="number" id="age" placeholder="20" />
+        </li>
+        <li>
+          <label for="email">e-mail</label><input type="email" id="email" placeholder="example@protonmail.com" />
+        </li>
+        <li>
+          <label for="referral">откуда вы узнали о нашей вакансии?</label><select id="referral">
+            <option hidden disabled selected></option>
+            <option>сайт с вакансиями</option>
+            <option>телеграм канал</option>
+            <option>от знакомых</option>
+          </select>
+        </li>
+        <li>
+          <label for="student">вы студент?</label><input type="checkbox" id="student" />
+        </li>
+        <li>
+          <label for="skills">расскажите о своих навыках</label><textarea id="skills"
+            placeholder="Я владею HTML, SCSS, Rust, Actix Web..."></textarea>
+        </li>
+      </ul>
+      <button type="submit">отправить</button>
+    </form>
+  </main>
+</body>
+
+</html>

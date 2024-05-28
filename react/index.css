@@ -1,0 +1,59 @@
+body {
+  font-family: sans-serif;
+  background: linear-gradient(to bottom right, black, hsl(270, 40%, 35%));
+  color: #f0f0f0;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+input {
+  border-radius: 1em;
+  background: black;
+  color: white;
+  border: 1px solid #5A5A5A;
+  padding: 0.5em 1em;
+}
+
+hr {
+  width: 50%;
+}
+
+
+/* .like-button { */
+/* border-radius: 1em; */
+/* background: black; */
+/* color: white; */
+/* border: 1px solid #5a5a5a; */
+/* padding: 0.5em 1em; */
+/* } */
+
+/* button:hover, */
+/* button:focus { */
+/* background: white; */
+/* color: black; */
+/* } */
+
+
+button {
+  background: black;
+  color: white;
+  width: 100px;
+  height: 30px;
+  border-radius: 4px;
+  /* margin: 50px; */
+}
+
+.button-on {
+  color: #666;
+  background-color: #ccc;
+}
+
+.button-off {
+  color: #888;
+  background-color: white;
+}

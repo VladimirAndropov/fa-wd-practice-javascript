@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <title>вакансия</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <main class="center-box">
+    <form class="resume-form">
+      <h1>оставить заявку</h1>
+      <div>
+        <div class="resume-form__row"><label class="resume-form__label" for="name">ФИО</label><input class="round-field"
+            type="text" id="name" placeholder="Иванов Иван Иванович" /></div>
+        <div class="resume-form__row">
+          <label class="resume-form__label" for="age">возраст</label><input
+            class="round-field number-input-no-increment" type="number" id="age" placeholder="20" />
+        </div>
+        <div class="resume-form__row">
+          <label class="resume-form__label" for="email">e-mail</label><input class="round-field" type="email" id="email"
+            placeholder="example@protonmail.com" />
+        </div>
+        <div class="resume-form__row">
+          <label class="resume-form__label" for="referral">откуда вы узнали о нашей вакансии?</label><select
+            class="round-field" id="referral">
+            <option hidden disabled selected></option>
+            <option>сайт с вакансиями</option>
+            <option>телеграм канал</option>
+            <option>от знакомых</option>
+          </select>
+        </div>
+        <div class="resume-form__row">
+          <label class="resume-form__label" for="student">вы студент?</label><input class="round-field round-checkbox"
+            type="checkbox" id="student" />
+        </div>
+        <div class="resume-form__row">
+          <label class="resume-form__label" for="skills">расскажите о своих навыках</label><textarea
+            class="round-field resume-form__textarea" id="skills"
+            placeholder="Я владею HTML, SCSS, Rust, Actix Web..."></textarea>
+        </div>
+      </div>
+      <button class="round-field resume-form__submit-button" type="submit">отправить</button>
+    </form>
+  </main>
+</body>
+
+</html>
