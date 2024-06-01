@@ -58,3 +58,6 @@
 [submodule "ЗБ-ПИ21-2/myasnikov-web-development"]
 	path = ЗБ-ПИ21-2/myasnikov-web-development
 	url = https://github.com/aleksandrm7/myasnikov-web-development
+[submodule "oshroev-fa-wd-practice-javascript"]
+	path = oshroev-fa-wd-practice-javascript
+	url = https://github.com/Startaper/oshroev-fa-wd-practice-javascript
