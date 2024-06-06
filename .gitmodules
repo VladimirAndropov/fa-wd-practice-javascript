@@ -61,3 +61,6 @@
 [submodule "Avseitseva-wd-portfolio"]
 	path = Avseitseva-wd-portfolio
 	url = https://github.com/avseitsevad/Avseitseva-wd-portfolio
+[submodule "avseitseva-react-project"]
+	path = avseitseva-react-project
+	url = https://github.com/avseitsevad/avseitseva-react-project.git
